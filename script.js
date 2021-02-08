@@ -4,6 +4,9 @@ currentPlayerText.innerHTML = `Let's Play!`;
 const restartBtn = document.querySelector('#restartBtn');
 const boxSpaces = [null, null, null, null, null, null, null, null, null];
 let currentPlayer = 'X';
+let playerTurn = document.querySelector('.playerTurn');
+
+playerTurn.innerHTML = `It's ${currentPlayer} 's turn`;
 
 boxes.forEach(box => {
     // set borders for each box
@@ -72,6 +75,7 @@ boxes.forEach(box => {
 
     box.addEventListener('click', (e) => {
         addPlayerText(e);
+
         box.addEventListener("mouseover", (e) => {
             box.style.cursor = 'no-drop';
         })
@@ -80,6 +84,7 @@ boxes.forEach(box => {
             return;
         }
         changePlayer();
+        playerTurn.innerHTML = `It's ${currentPlayer} 's turn`;
     })
 })
 
