@@ -25,7 +25,8 @@ body {
   align-items: center;
 }
 .container h1 {
-  margin-bottom: 50px;
+  margin-top: 10px;
+  margin-bottom: 30px;
   font-size: 20px;
   line-height: 20px;
 }
